@@ -41,3 +41,15 @@
     environment:
       DBUS_SESSION_BUS_ADDRESS: unix:path=/run/user/1000/bus
 
+  - name: set wallpaper position
+    become_user: zanbee
+    xfconf:
+      channel: "xfce4-desktop"
+      property: "/backdrop/screen0/monitorDVI-D-1/workspace0/backdrop-cycle-random-order"
+      value_type: bool
+      value: "true"
+    become_user: zanbee
+    become: true
+    environment:
+      DBUS_SESSION_BUS_ADDRESS: unix:path=/run/user/1000/bus
+
