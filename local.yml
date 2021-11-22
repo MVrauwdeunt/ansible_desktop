@@ -10,6 +10,7 @@
         - htop
         - keepass
         - cura
+        - code
 
   - name: copy wallpaper folder
     copy:
@@ -52,4 +53,31 @@
     become: true
     environment:
       DBUS_SESSION_BUS_ADDRESS: unix:path=/run/user/1000/bus
+
+  - name: copy .bashrc file
+    copy:
+      src: files/bashrc
+      dest: /home/zanbee/.bashrc
+      owner: zanbee
+      group: zanbee
+
+  - name: add ansible user
+    user:
+      name: vor
+      system: yes
+
+  - name: set up sudo for ansible user
+    copy:
+      src: files/sudoer_vor
+      dest: /etc/sudoers.d/vor
+      owner: root
+      group: root
+      mode: 0440
+ 
+  - name: add ansible-pull cron job
+    cron:
+      name: ansible auto-provision
+      user: vor
+      minute: "*/10"
+      job: ansible-pull -o -U https://github.com/MVrauwdeunt/ansible_desktop.git
 
