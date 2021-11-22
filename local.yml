@@ -1,5 +1,8 @@
 ---
-- hosts: localhost
+
+
+- name: Desktop and laptop playbook
+  hosts: localhost
   connection: local
   become: true
 
