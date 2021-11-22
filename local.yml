@@ -12,6 +12,6 @@
 
   tasks:
     - include: tasks/packages.yml
-    - include: wallpaper.yml
-    - include: configuration.yml
-    - include: auto_provision.yml
+    - include: tasks/wallpaper.yml
+    - include: tasks/configuration.yml
+    - include: tasks/auto_provision.yml
