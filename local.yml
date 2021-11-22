@@ -29,7 +29,7 @@
     environment:
       DBUS_SESSION_BUS_ADDRESS: unix:path=/run/user/1000/bus
 
-  - name: set wallpaper position
+  - name: set changing wallpaper
     become_user: zanbee
     xfconf:
       channel: "xfce4-desktop"
@@ -41,7 +41,7 @@
     environment:
       DBUS_SESSION_BUS_ADDRESS: unix:path=/run/user/1000/bus
 
-  - name: set wallpaper position
+  - name: set random wallpaper
     become_user: zanbee
     xfconf:
       channel: "xfce4-desktop"
