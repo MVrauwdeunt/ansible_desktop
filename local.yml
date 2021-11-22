@@ -12,6 +12,8 @@
           - htop
           - cronie
           - keepass
+          - nextcloud-client
+          - steam
           - cura
           - code
 
