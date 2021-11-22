@@ -4,14 +4,9 @@
   hosts: localhost
   connection: local
   become: true
-  pre_tasks:
-    - name: Run the equivalent of "pacman -Syu" as a separate step
-      community.general.pacman:
-        update_cache: yes
-        upgrade: yes
 
   tasks:
-    - include: tasks/packages.yml
-    - include: tasks/wallpaper.yml
-    - include: tasks/configuration.yml
-    - include: tasks/auto_provision.yml
+    - import_playbook: tasks/packages.yml
+    - import_playbook: tasks/wallpaper.yml
+    - import_playbook: tasks/configuration.yml
+    - import_playbook: tasks/auto_provision.yml
