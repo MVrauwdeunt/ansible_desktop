@@ -38,5 +38,6 @@
       value: "true"
     become_user: zanbee
     become: true
+    environment:
         
 
