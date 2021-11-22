@@ -10,5 +10,23 @@
         - htop
         - keepass
         - cura
+
+  - name: copy wallpaper folder
+    copy:
+      src: files/salientos/
+      dest: /usr/share/backgrounds/endeavouros/backgrounds/
+      owner: root
+      group: root
+
+  - name: set wallpaper
+    xfconf:
+      key: "/backdrop/screen0/monitorDVI-D-1/workspace0/last-image"
+      value: "'file:///usr/share/endeavouros/backgrounds/salientos/01.jpg'"
+
+  - name: set wallpaper position
+    xfconf:
+      key: "/backdrop/screen0/monitorDVI-D-1/workspace0/backdrop-cycle-enable"
+      value: "true"
+
         
 
