@@ -7,8 +7,8 @@
   pre_tasks:
     - name: Run the equivalent of "pacman -Syu" as a separate step
       community.general.pacman:
-      update_cache: yes
-      upgrade: yes
+        update_cache: yes
+        upgrade: yes
 
   tasks:
     - include: tasks/packages.yml
