@@ -39,5 +39,5 @@
     become_user: zanbee
     become: true
     environment:
-        
+      DBUS_SESSION_BUS_ADDRESS: unix:path=/run/user/1000/bus
 
