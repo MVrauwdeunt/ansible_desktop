@@ -22,12 +22,12 @@
         owner: zanbee
         group: zanbee
 
-  - name: copy wallpaper folder
-    copy:
-      src: files/salientos/
-      dest: /usr/share/endeavouros/backgrounds/salientos
-      owner: root
-      group: root
+    - name: copy wallpaper folder
+      copy:
+        src: files/salientos/
+        dest: /usr/share/endeavouros/backgrounds/salientos
+        owner: root
+        group: root
 
     - name: set wallpaper
       xfconf:
