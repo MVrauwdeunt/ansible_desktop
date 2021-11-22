@@ -19,7 +19,7 @@
       group: root
 
   - name: set wallpaper
-    shell: "xfconf-query --channel xfce4-desktop --property /backdrop/screen0/monitorDVI-D-1/workspace0/last-image -s /usr/share/endeavouros/backgrounds/salientos/01.jpg
+    shell: "xfconf-query --channel xfce4-desktop --property /backdrop/screen0/monitorDVI-D-1/workspace0/last-image -s /usr/share/endeavouros/backgrounds/salientos/01.jpg"
 
   - name: set wallpaper position
     become_user: zanbee
