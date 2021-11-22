@@ -19,6 +19,7 @@
       group: root
 
   - name: set wallpaper
+    become: true
     become_user: zanbee
     xfconf:
       channel: "xfce4-desktop"
