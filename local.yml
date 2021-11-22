@@ -14,7 +14,7 @@
   - name: copy wallpaper folder
     copy:
       src: files/salientos/
-      dest: /usr/share/endeavouros/backgrounds/
+      dest: /usr/share/endeavouros/backgrounds/salientos
       owner: root
       group: root
 
