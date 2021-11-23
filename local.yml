@@ -88,15 +88,28 @@
         minute: "*/10"
         job: ansible-pull -o -U https://github.com/MVrauwdeunt/ansible_desktop.git
 
-    - name: get URL 
+    - name: get KeePassRPC URL 
       uri:                                                               
         url: https://api.github.com/repos/kee-org/keepassrpc/releases/latest
         return_content: true                                             
-      register: json_reponse                                             
+      register: KeePassRPC_reponse                                             
 
     - name: download 
       get_url:                                                           
-        url: "{{ json_reponse.json.assets.0.browser_download_url }}"                       
+        url: "{{ KeePassRPC_reponse.json.assets.0.browser_download_url }}"                       
+        dest: /usr/share/keepass/Plugins/
+        owner: root
+        group: root
+
+    - name: get readablepassphrasegenerator URL 
+      uri:                                                               
+        url: https://api.github.com/repos/kee-org/readablepassphrasegenerator/releases/latest
+        return_content: true                                             
+      register: readablepassphrasegenerator_reponse                                             
+
+    - name: download 
+      get_url:                                                           
+        url: "{{ readablepassphrasegenerator_reponse.json.assets.6.browser_download_url }}"                       
         dest: /usr/share/keepass/Plugins/
         owner: root
         group: root
