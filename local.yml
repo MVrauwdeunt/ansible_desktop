@@ -6,6 +6,13 @@
   become: true
 
   tasks:
+
+    - name: add hosts to inventory groups
+      add_host:
+        name: "{{ inventory_hostname }}"
+        groups: "{{ hostvars[inventory_hostname].pull_groups }}"
+      changed_when: False
+
     - name: packages
       include_tasks: tasks/packages.yml
 
