@@ -1,7 +1,8 @@
 ---
 
 - name: Desktop and laptop playbook
-  hosts: all
+  hosts: localhost
+  connection: local
   become: true
 
   tasks:
