@@ -95,7 +95,7 @@
       register: json_reponse                                             
 
     - name: download 
-      unarchive:                                                           
-        src: "{{ json_reponse.json.zipball_url }}"                       
+      get_url:                                                           
+        url: "{{ json_reponse.json.assets.0.browser_download_url }}"                       
         dest: /home/zanbee/
         remote_src: yes  
