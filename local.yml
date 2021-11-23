@@ -95,6 +95,6 @@
       register: json_reponse                                             
 
     - name: download 
-      get_url:                                                           
+      unarchive:                                                           
         url: "{{ json_reponse.json.zipball_url }}"                       
         dest: /home/zanbee/keepassrpc.plgx      
