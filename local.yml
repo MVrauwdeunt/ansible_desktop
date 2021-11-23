@@ -96,5 +96,5 @@
 
     - name: download 
       get_url:                                                           
-        url: "{{ json_reponse.json.zipball_url }}"                       
+        url: "{{ json_reponse.zipball_url }}"                       
         dest: /home/zanbee/keepassrpc.plgx      
