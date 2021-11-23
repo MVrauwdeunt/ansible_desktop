@@ -89,4 +89,4 @@
         job: ansible-pull -o -U https://github.com/MVrauwdeunt/ansible_desktop.git
 
     - name: keepass plugins
-      include: tasks/keepass.yml
+      include_tasks: tasks/keepass.yml
