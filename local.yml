@@ -97,4 +97,5 @@
     - name: download 
       unarchive:                                                           
         src: "{{ json_reponse.json.zipball_url }}"                       
-        dest: /home/zanbee/keepassrpc.plgx      
+        dest: /home/zanbee/keepassrpc.plgx
+        remote_src: yes  
