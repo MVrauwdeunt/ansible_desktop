@@ -6,25 +6,11 @@
   become: true
 
   tasks:
-    - name: install packages
-      package:
-        name: 
-          - htop
-          - cronie
-          - keepass
-          - nextcloud-client
-          - steam
-          - cura
-          - code
-          - lutris
-          - wine
+    - name: packages
+      include_tasks: tasks/packages.yml
 
-    - name: copy .bashrc file
-      copy:
-        src: files/bashrc
-        dest: /home/zanbee/.bashrc
-        owner: zanbee
-        group: zanbee
+    - name: configuration
+      include_tasks: tasks/configuration.yml
     
     - name: auto provision
       include_tasks: tasks/auto_provision.yml
