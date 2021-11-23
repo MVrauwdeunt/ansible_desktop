@@ -96,5 +96,5 @@
 
     - name: download 
       unarchive:                                                           
-        url: "{{ json_reponse.json.zipball_url }}"                       
+        src: "{{ json_reponse.json.zipball_url }}"                       
         dest: /home/zanbee/keepassrpc.plgx      
