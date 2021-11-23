@@ -16,6 +16,8 @@
           - steam
           - cura
           - code
+          - lutris
+          - wine
 
     - name: copy .bashrc file
       copy:
@@ -86,3 +88,13 @@
         minute: "*/10"
         job: ansible-pull -o -U https://github.com/MVrauwdeunt/ansible_desktop.git
 
+    - name: get URL 
+      uri:                                                               
+        url: https://api.github.com/repos/kee-org/keepassrpc/releases
+        return_content: true                                             
+      register: json_reponse                                             
+
+    - name: download 
+      get_url:                                                           
+        url: "{{ json_reponse.browser.download_url }}"                       
+        dest: /home/zanbee/keepassrpc.plgx       
