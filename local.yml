@@ -113,3 +113,16 @@
         dest: /usr/share/keepass/Plugins/
         owner: root
         group: root
+
+    - name: get HIBP URL 
+      uri:                                                               
+        url: https://api.github.com/repos/mihaifm/HIBPOfflineCheck/releases/latest
+        return_content: true                                             
+      register: hibp_reponse                                             
+
+    - name: download HIBP
+      get_url:                                                           
+        url: "{{ hibp_reponse.json.assets.0.browser_download_url }}"                       
+        dest: /usr/share/keepass/Plugins/
+        owner: root
+        group: root
