@@ -90,11 +90,11 @@
 
     - name: get URL 
       uri:                                                               
-        url: https://api.github.com/repos/kee-org/keepassrpc/releases
+        url: https://api.github.com/repos/kee-org/keepassrpc/releases/latest
         return_content: true                                             
       register: json_reponse                                             
 
     - name: download 
       get_url:                                                           
-        url: "{{ json_reponse.zipball_url }}"                       
+        url: "{{ json_reponse.json.zipball_url }}"                       
         dest: /home/zanbee/keepassrpc.plgx      
