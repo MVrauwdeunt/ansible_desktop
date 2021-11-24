@@ -6,7 +6,8 @@
   become: true
 
   tasks:
-    - debug: var=ansible_hostname
+    - include_tasks: tasks/odin/hostname.yml
+      when: "'Odin' in ansible_hostname" 
     
     - name: auto provision
       include_tasks: tasks/auto_provision.yml
