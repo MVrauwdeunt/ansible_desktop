@@ -6,5 +6,8 @@
   become: true
 
   tasks:
+    - group_by: key=workstation
+      when: "'Odin' in ansible_hostname"
+    - debug: var=system_type
     - include_tasks: tasks/odin/main.yml
       when: "'Odin' in ansible_hostname" 

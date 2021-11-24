@@ -2,4 +2,4 @@ localhost ansible_connection=local
 
 [workstation]
 [workstation:vars]
-server_type=workstation
+system_type=workstation
