@@ -14,3 +14,7 @@
 
     - name: keepass plugins
       include_tasks: keepass.yml
+    
+    - name: nextcloud
+      include_tasks: nextcloud.yml
+      
