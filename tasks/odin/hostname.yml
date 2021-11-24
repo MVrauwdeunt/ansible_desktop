@@ -1,1 +1,3 @@
 - debug: var=ansible_hostname
+
+- debug: var=ansible_user_id
