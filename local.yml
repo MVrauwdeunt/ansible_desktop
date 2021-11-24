@@ -6,6 +6,9 @@
   become: true
 
   tasks:
+    - group_by: key=workstation
+      when: "'Odin' in ansible_hostname"
+    - debug: var=workstation
 
     - name: auto provision
       include_tasks: tasks/auto_provision.yml

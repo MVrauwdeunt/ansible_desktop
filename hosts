@@ -1,2 +1,5 @@
+localhost ansible_connection=local
+
 [workstation]
-Odin
+[workstation:vars]
+server_type=workstation
