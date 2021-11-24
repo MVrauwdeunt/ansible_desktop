@@ -10,6 +10,7 @@
 
   tasks:
     - name: echo email
-      shell: echo "{{ email }}"   
+      debug: 
+        msg:  echo "{{ email }}"   
     - include_tasks: tasks/odin/main.yml
       when: "'Odin' in ansible_hostname" 
