@@ -4,7 +4,12 @@
   hosts: localhost
   connection: local
   become: true
+  
+  vars_files:
+    - vars/secret.yml
 
   tasks:
+    - name: echo email
+      shell: echo "{{ email }}"   
     - include_tasks: tasks/odin/main.yml
       when: "'Odin' in ansible_hostname" 
