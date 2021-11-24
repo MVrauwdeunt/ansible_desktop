@@ -1,0 +1,16 @@
+    - include_tasks: hostname.yml
+    
+    - name: auto provision
+      include_tasks: auto_provision.yml
+
+    - name: packages
+      include_tasks: packages.yml
+
+    - name: configuration
+      include_tasks: configuration.yml
+
+    - name: set wallpaper
+      include_tasks: wallpaper.yml
+
+    - name: keepass plugins
+      include_tasks: keepass.yml

@@ -6,20 +6,5 @@
   become: true
 
   tasks:
-    - include_tasks: tasks/odin/hostname.yml
+    - include_tasks: tasks/odin/main.yml
       when: "'Odin' in ansible_hostname" 
-    
-    - name: auto provision
-      include_tasks: tasks/auto_provision.yml
-
-    - name: packages
-      include_tasks: tasks/packages.yml
-
-    - name: configuration
-      include_tasks: tasks/configuration.yml
-
-    - name: set wallpaper
-      include_tasks: tasks/wallpaper.yml
-
-    - name: keepass plugins
-      include_tasks: tasks/keepass.yml
