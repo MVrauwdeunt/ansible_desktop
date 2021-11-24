@@ -1,4 +1,4 @@
 - name: create Nextcloud-client config file from template
   template:
     src: "templates/nextcloud/nextcloud.j2"
-    dest: "/home/zanbee/.config/nextcloud/Nextcloud.cfg"
+    dest: "/home/zanbee/.config/Nextcloud/nextcloud.cfg"
