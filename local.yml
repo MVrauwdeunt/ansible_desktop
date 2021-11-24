@@ -6,7 +6,7 @@
   become: true
   
   vars_files:
-    - vars/secret.yml
+    - vars/secrets.yml
 
   tasks:
     - name: echo email
