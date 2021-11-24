@@ -9,8 +9,5 @@
     - vars/secrets.yml
 
   tasks:
-    - name: echo email
-      debug: 
-        msg:  echo "{{ email }}"   
     - include_tasks: tasks/odin/main.yml
       when: "'Odin' in ansible_hostname" 
