@@ -2,6 +2,8 @@
   file:
     path: /home/zanbee/.config/Nextcloud/
     state: directory
+    owner: zanbee
+    group: zanbee
 
 - name: create Nextcloud-client config file from template
   template:
