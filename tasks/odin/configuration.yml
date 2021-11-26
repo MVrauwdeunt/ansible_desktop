@@ -5,3 +5,8 @@
       dest: /home/zanbee/.bashrc
       owner: zanbee
       group: zanbee
+
+  - name: Insert alias to /etc/bash.bashrc
+    lineinfile:
+      path: /etc/bash.bashrc
+      line: "alias vi='vim'"

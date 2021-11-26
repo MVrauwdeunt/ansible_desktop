@@ -1,6 +1,13 @@
-- name: create Nextcloud-client folder
+- name: create Nextcloud-client config folder
   file:
     path: /home/zanbee/.config/Nextcloud/
+    state: directory
+    owner: zanbee
+    group: zanbee
+
+- name: create Nextcloud-client folder
+  file:
+    path: /home/zanbee/Nextcloud/
     state: directory
     owner: zanbee
     group: zanbee
