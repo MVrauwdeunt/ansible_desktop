@@ -10,3 +10,10 @@
     lineinfile:
       path: /etc/bash.bashrc
       line: "alias vi='vim'"
+
+  - name: create .gitconfig
+    template:
+      src: "templates/gitconfig.j2"
+      dest: "/home/zanbee/.gitconfig"
+      owner: zanbee
+      group: zanbee
