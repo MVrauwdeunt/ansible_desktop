@@ -17,6 +17,8 @@
         - wine
         - powerline-fonts
         - bc
+        - xsel
+        - xdotool
   
   - name: Clone Synth-Shell github repository
     git:
