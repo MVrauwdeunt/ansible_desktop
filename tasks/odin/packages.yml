@@ -16,6 +16,7 @@
         - steam
         - wine
         - powerline-fonts
+        - bc
   
   - name: Clone Synth-Shell github repository
     git:
@@ -29,5 +30,5 @@
       path: /home/zanbee/synth-shell/setup.sh
       mode: +x
 
-  - name: Run setup scruipt
-    ansible.builtin.script: /home/zanbee/synth-shell/setup.sh
+  #- name: Run setup scruipt
+  #  ansible.builtin.script: /home/zanbee/synth-shell/setup.sh
