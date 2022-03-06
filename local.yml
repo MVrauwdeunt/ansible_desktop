@@ -5,11 +5,11 @@
   connection: local
   become: true
   
-  #vars_files:
-    #- vars/secrets.yml
+  vars_files:
+    - vars/secrets.yml
 
-  #vars:
-    #ansible_become_pass: '{{ su_password }}'
+  vars:
+    ansible_become_pass: '{{ su_password }}'
 
   tasks:
     - include_tasks: tasks/odin/main.yml
