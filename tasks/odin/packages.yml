@@ -18,7 +18,7 @@
         - powerline-fonts
   
   - name: Clone Synth-Shell github repository
-      git:
+    git:
       repo: https://github.com/andresgongora/synth-shell.git
       dest: /home/zanbee/synth-shell
       clone: yes
