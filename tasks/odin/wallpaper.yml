@@ -17,7 +17,6 @@
     DBUS_SESSION_BUS_ADDRESS: unix:path=/run/user/1000/bus
 
 - name: set changing wallpaper
-  become_user: zanbee
   xfconf:
     channel: "xfce4-desktop"
     property: "/backdrop/screen0/monitorHDMI-0/workspace0/backdrop-cycle-enable"
@@ -29,7 +28,6 @@
     DBUS_SESSION_BUS_ADDRESS: unix:path=/run/user/1000/bus
 
 - name: set random wallpaper
-  become_user: zanbee
   xfconf:
     channel: "xfce4-desktop"
     property: "/backdrop/screen0/monitorHDMI/workspace0/backdrop-cycle-random-order"
