@@ -8,7 +8,7 @@
 - name: set wallpaper
   xfconf:
     channel: "xfce4-desktop"
-    property: "/backdrop/screen0/monitorDVI-D-1/workspace0/last-image"
+    property: "/backdrop/screen0/monitorHDMI-0/workspace0/last-image"
     value_type: string
     value: "/usr/share/endeavouros/backgrounds/salientos/01.jpg"
   become_user: zanbee
@@ -20,7 +20,7 @@
   become_user: zanbee
   xfconf:
     channel: "xfce4-desktop"
-    property: "/backdrop/screen0/monitorDVI-D-1/workspace0/backdrop-cycle-enable"
+    property: "/backdrop/screen0/monitorHDMI-0/workspace0/backdrop-cycle-enable"
     value_type: bool
     value: "true"
   become_user: zanbee
@@ -32,7 +32,7 @@
   become_user: zanbee
   xfconf:
     channel: "xfce4-desktop"
-    property: "/backdrop/screen0/monitorDVI-D-1/workspace0/backdrop-cycle-random-order"
+    property: "/backdrop/screen0/monitorHDMI/workspace0/backdrop-cycle-random-order"
     value_type: bool
     value: "true"
   become_user: zanbee
