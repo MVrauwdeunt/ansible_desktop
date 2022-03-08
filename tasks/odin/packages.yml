@@ -32,5 +32,5 @@
       path: /home/zanbee/synth-shell/setup.sh
       mode: +x
 
-  #- name: Run setup scruipt
-  #  ansible.builtin.script: /home/zanbee/synth-shell/setup.sh
+  - name: Run Synth-Shell setup 
+    ansible.builtin.command: yes | sudo ./setup.sh install
