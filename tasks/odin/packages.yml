@@ -19,6 +19,7 @@
         - bc
         - xsel
         - xdotool
+        - virtualbox
   
   - name: Clone Synth-Shell github repository
     git:
