@@ -37,4 +37,4 @@
       mode: +x
 
   - name: Run Synth-Shell setup 
-    ansible.builtin.shell: yes | ./home/zanbee/synth-shell/setup.sh install
+    ansible.builtin.shell: yes | sudo /home/zanbee/synth-shell/setup.sh install
