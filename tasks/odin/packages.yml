@@ -20,6 +20,9 @@
         - xsel
         - xdotool
         - virtualbox
+        - linux-headers
+        - base-devel
+        - dkms
   
   - name: Clone Synth-Shell github repository
     git:
